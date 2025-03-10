@@ -1,0 +1,131 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.background_accueil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.navbar_rea  img {
+    border-radius: 40px;
+}
+
+
+.navbar_rea {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #0d1b4da3, #5b2a8c96);
+    width: 5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.content_global {
+    position: fixed;
+    width: 87%;
+    height: 87%;
+    top: 4%;
+    left: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 7px;
+}
+
+.content_global img {
+    height: 200px;
+}
+
+
+.content_global > .video_show {
+    background-color: rgba(0, 0, 0, 0.53);
+    border-radius: 20px;
+    border: antiquewhite 5px outset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.video_show video {
+    max-height: 200px;
+}
+
+.content_global > .text_desc {
+    background-color: rgba(0, 0, 0, 0.53);
+    border-radius: 20px;
+    border: grey 5px inset;
+    color: white;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text_desc > *:first-child {
+    padding: 10px;
+    font-family: 'Fira Code', cursive;
+    font-size: 12px;
+}
+
+.content_global  .logo_show {
+    background-color: rgba(0, 0, 0, 0.53);
+    border-radius: 20px;
+    border: #cc7c07 5px double;
+    display: flex;
+    justify-content: center;
+}
+
+.hacking-container {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+}
+
+.hacking-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    min-width: 200px;
+}
+
+.hacking-image.active {
+    opacity: 1;
+}
+
+/* Effet de glitch */
+.glitch {
+    animation: glitch 0.1s infinite alternate;
+}
+
+@keyframes glitch {
+    0% { transform: translate(2px, -2px) skewX(10deg); filter: hue-rotate(10deg); }
+    50% { transform: translate(-2px, 2px) skewX(-10deg); filter: hue-rotate(-10deg); }
+    100% { transform: translate(0, 0) skewX(0); filter: hue-rotate(0); }
+}
+
+.recap_desc {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(6, 175, 175, 0.71);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-family: 'Fira Code', cursive;
+}
+
+
+/*.hacking-container img {*/
+/*    height: 150px;*/
+/*}*/
