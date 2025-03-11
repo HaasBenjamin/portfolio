@@ -4,6 +4,12 @@ html, body {
     margin: 0;
 }
 
+.contactDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 5px;
+}
+
 .background_accueil {
     position: absolute;
     top: 0;
