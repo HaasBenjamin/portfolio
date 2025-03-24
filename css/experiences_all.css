@@ -1,0 +1,224 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* Largeur et hauteur de la scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Couleur de fond de la scrollbar */
+::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, #333, #777, #ccc);
+    border-radius: 5px;
+}
+
+/* Style du curseur de défilement */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Effet au survol */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+.title_desc {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.bloc_description {
+    margin-bottom: 10px;
+}
+
+.regles_content, .regles_content *, .flip-container, .flip-container *  {
+    height: fit-content!important;
+}
+
+.flip-container {
+    perspective: 1000px;
+    width: 100%; /* Prend toute la largeur disponible */
+    /*height: auto;*/
+    display: block;
+    /*position: relative;*/
+}
+
+.flipper {
+    width: 100%;
+    min-height: 100px; /* Ajuste selon la taille du texte */
+    /*position: relative;*/
+    transform-style: preserve-3d;
+    transition: transform 2.6s;
+}
+
+.flip-container.flipped .front {
+    height: 0!important;
+}
+
+.flip-container:not(.flipped) .back {
+    height: 0!important;
+}
+
+.front, .back {
+    /*position: absolute;*/
+    width: 100%;
+    /*min-height: 100px;*/
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    box-sizing: border-box;
+}
+
+.back {
+    transform: rotateY(180deg);
+    /*background: lightgray;*/
+}
+
+.flip-container.flipped .flipper {
+    transform: rotateY(180deg);
+}
+
+.title_group p {
+    margin-bottom: 0!important;
+}
+
+.title_group .back, .title_group .front, .title_group .flipper {
+    height: fit-content!important;
+    min-height: 0!important;
+}
+
+.title_group {
+    min-height: 50px;
+}
+
+.background_accueil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.navbar_exp  img {
+    background-color: white;
+    border-radius: 40px;
+}
+
+.regles {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.regles > * {
+    color: black;
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.regles_title {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.type_regles {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline dashed;
+    margin-bottom: 10px;
+}
+
+.title_group {
+    font-size: 25px;
+    font-style: italic;
+    border: aliceblue 2px inset;
+    margin: 5px;
+    padding: 5px;
+}
+
+.regles_content {
+    text-align: justify;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.regles_content_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.content_global {
+    background-color: rgb(150 0 255 / 31%);
+    width: 65%;
+    height: 100%;
+    rgb(164 150 150 / 60%);
+    margin-left: 7%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title_sport {
+    text-align: center;
+    font-size: 35px;
+    color: #fff12f;
+    border: 10px outset #fff12f;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*.hexagon {*/
+/*    background: #3498db;*/
+/*    color: white;*/
+/*    padding: 40px;*/
+/*    text-align: center;*/
+/*    width: 300px;*/
+/*    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);*/
+/*    transform: rotate(-15deg);*/
+/*    position: fixed;*/
+/*}*/
+
+
+.navbar_exp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.infosMoi {
+    background-color: orangered;
+}
+
+.bloc_description {
+    background-color: rgba(255, 255, 255, 0.61);
+    border: 2px darkgrey solid;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}

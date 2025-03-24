@@ -25,8 +25,8 @@ function switchImage() {
     }, 4000)
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        switchImage();
-    }, 3000)
-})
+// document.addEventListener('DOMContentLoaded', () => {
+//     setTimeout(() => {
+//         switchImage();
+//     }, 3000)
+// })
